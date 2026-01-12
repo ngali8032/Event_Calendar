@@ -18,7 +18,8 @@ Build Tool: Makefile
 Platform: Linux (GitHub Codespaces / Ubuntu Terminal)
 
 📁 Project Structure
-Event_Calendar/
+Event_Calendar
+
 ├── main.c              → Application entry point  
 ├── header.h            → Structs and function prototypes  
 ├── add_event.c         → Add event functionality  

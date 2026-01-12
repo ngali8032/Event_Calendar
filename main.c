@@ -9,7 +9,6 @@ void printMenu(void)
         printf("v/V: view all saved Events\n");
         printf("d/D: Delete an Event\n");
         printf("s/S: Save an Event\n");
-        printf("l/L: sync Events from file\n");
         printf("f/F: Find all Events on a specific date\n");
         printf("q/Q: Quit the application\n" RESET);
 }
@@ -27,14 +26,13 @@ int main()
                 __fpurge(stdin);
                 switch(choice)
                 {
-                        case 'a': head = add_event(head); break;
-                        case 'v': display_events(head); break;
-                        case 'q': exit(0);
-                        case 'p': calender(); break;
-                        case 's': save_events(head); break;
-                        case 'l': sync_events(head); break;
-                        case 'd': delete(head); break;
-                        case 'f': find(head); break;
+                        case 'a': case 'A': head = add_event(head); break;
+                        case 'v': case 'V': display_events(head); break;
+                        case 'q': case 'Q': exit(0);
+                        case 'p': case 'P': calender(); break;
+                        case 's': case 'S': save_events(head); break;
+                        case 'd': case 'D': delete(head); break;
+                        case 'f': case 'F': find(head); break;
                         default: printf("Invalid input\n");
                 }
         }
